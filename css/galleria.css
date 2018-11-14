@@ -1,0 +1,68 @@
+/* carousel */
+.carousel {
+  background: #0000;
+  overflow-x: scroll;
+  z-index: 1;
+  margin-left: 10%;
+  margin-right: 10%;
+  
+}
+
+.carousel-cell {
+  margin-right: 20px;
+  overflow-x:scroll;
+width: 100%;
+  z-index: 1;
+padding-left: 5%; 
+padding-right: 5%; 
+}
+
+.flickity-button {
+  background: rgba(255, 255, 255, 0.432);
+  border: none;
+ 
+}
+.flickity-button:hover {
+  background: rgb(255, 255, 255);
+}
+
+.flickity-prev-next-button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  box-shadow: 0px 1px 2px #888888;
+}
+/* icon color */
+.flickity-button-icon {
+  fill: rgb(127, 206, 239);
+}
+
+/*esterno*/
+.flickity-prev-next-button.previous {
+  left: -40px;
+}
+.flickity-prev-next-button.next {
+  right: -40px;
+}
+
+
+  
+
+
+.carousel-cell img {
+  display: block;
+  height: auto;
+}
+
+@media screen and ( min-width: 768px ) {
+  .carousel-cell img {
+
+    height:50vh;
+  }
+}
+
+.carousel-cell.is-clicked {
+  border-bottom: 4px solid black;
+  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
+}

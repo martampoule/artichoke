@@ -1,0 +1,48 @@
+.rate {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.input1 {
+  display: none;
+}
+
+label {
+  float: right;
+  font-size: 0;
+  color: #d9d9d9;
+}
+
+label:before {
+  content: "\f005";
+  font-family: FontAwesome;
+  font-size: 20px;
+}
+
+label:hover,
+label:hover ~ label {
+  color: #fcd000;
+  transition: 0.2s;
+}
+
+input:checked ~ label {
+  color: #ccac00;
+}
+
+input:checked ~ label:hover,
+input:checked ~ label:hover ~ label {
+  color: #fcd000;
+  transition: 0.2s;
+}
+
+.star-half {
+  position: relative;
+}
+
+.star-half:before {
+  position: absolute;
+  content: "\f089";
+  padding-right: 0;
+}
