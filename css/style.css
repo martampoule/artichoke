@@ -61,6 +61,16 @@ color: white;
   display: inline;
 }
 
+/*DA NON SAPERE*/
+
+.metà{
+  background: (to right, white 40%, rgb(0, 206, 0) 60%);
+  border-color: rgb(201, 201, 201);
+  border-width: 1px;
+  border-style: solid;
+}
+
+
 /*LEFT COLUMN____________________________________________________________________________________________________________*/
 .rect-azzurro {
   background-color: #e9f0fa;
