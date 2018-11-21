@@ -56,10 +56,9 @@ body {
   }
   
   .ai,
-  .utente,
   .person {
     overflow: auto;
-    margin: 100px;
+    margin: 10px;
     border: 2px solid black;
     border-radius: 8px;
     display: inline-block;
@@ -171,3 +170,4 @@ body {
       float: right;
     }
   }
+ 

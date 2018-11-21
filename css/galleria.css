@@ -9,7 +9,7 @@
 }
 
 .carousel-cell {
-  margin-right: 20px;
+
   overflow-x:scroll;
 width: 100%;
   z-index: 1;
@@ -51,7 +51,8 @@ padding-right: 5%;
 
 .carousel-cell img {
   display: block;
-  height: auto;
+  height: 100%;
+
 }
 
 @media screen and ( min-width: 768px ) {
@@ -59,10 +60,4 @@ padding-right: 5%;
 
     height:50vh;
   }
-}
-
-.carousel-cell.is-clicked {
-  border-bottom: 4px solid black;
-  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
-  filter: grayscale(0%);
 }
