@@ -45,19 +45,15 @@ padding-right: 5%;
   right: -40px;
 }
 
-
-  
-
-
 .carousel-cell img {
   display: block;
   height: 100%;
-
+  z-index: 1;
 }
 
 @media screen and ( min-width: 768px ) {
   .carousel-cell img {
-
+    z-index: 1;
     height:50vh;
   }
 }

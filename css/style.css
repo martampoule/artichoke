@@ -401,6 +401,14 @@ color: white;
   padding-right: 2%;
 }
 
+.footer-blu-item {
+  font-weight: 600;
+  display: inline;
+  font-size: .98em;
+  color: white;
+  text-decoration: none;
+  padding-right: 2%;
+}
 
 .navbar-blu-item a {
   padding: 1%;
