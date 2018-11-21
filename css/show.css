@@ -1,23 +1,27 @@
-.show{
-    display: none;
+#close-container {
+    width: 100%;
+    height: 100%;
+    background:rgba(0,0,0,0.2);
     position: fixed;
-width: 100%;
-    background-color: rgba(1, 1, 1, 0.233);
-    z-index: 98;
+    right: 0;
     top: 0;
-    border: solid;
-    border-color: red;
-overflow: scroll;
+    z-index: 4;
+    display: none;
 }
 
-.show > .container-show{
-    box-shadow:  0px -20px 10px #888888;
-right: 0;
-width: 40%;
-    padding: 0;
-    z-index: 99;
-    background-color: white;
-    margin: 0;
+#slider {
+    width: 40%;
+    height: 100%;
+    position: fixed;
+    right: -600px;
+    top: 0;
+    z-index: 5;
+    transition: all 1s;
+    overflow: scroll;
+    background: white;
+    box-shadow: 0 -20px 40px;
+}
 
-
+#slider.slider-active {
+    right: 0;  
 }

@@ -2,6 +2,23 @@
 
     "use strict";
   
+
+    $("#servizi").click(function(e) {
+      if(!$("#slider").hasClass("slider-active")) {
+        $("#close-container").fadeIn("slow");
+        $("#slider").addClass("slider-active");
+      }
+    })
+
+    $("#close-container").click(function(e) {
+      if($("#slider").hasClass("slider-active")) {
+        $("#close-container").fadeOut("slow");
+        $("#slider").removeClass("slider-active");
+      }
+    })
+
+
+
     const responses = [
       "मैं आपकी भाषा को समझ नहीं पा रहा हूं",
       "हमें एक अनुवादक की जरूरत है",
