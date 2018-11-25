@@ -3,6 +3,7 @@
     "use strict";
   
 
+
     $("#servizi").click(function(e) {
       if(!$("#slider").hasClass("slider-active")) {
         $("#close-container").fadeIn("slow");
