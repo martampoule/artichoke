@@ -43,6 +43,7 @@ marta
     <link rel="stylesheet" href="css/show.css">
     <link rel="stylesheet" href="css/reveal.css">
 
+
 </head>
 
 <body class="body" id="">
@@ -1413,6 +1414,22 @@ marta
                             </div>
                         </section>
 
+                        <!--da non sapere-->
+                        <section class="container-fluid" style="padding-right: 0; padding-top: 5%;" id="da-non-sapere">
+                                <p class="textbold-title"> Da non sapere</p>
+                                <p class="textlight">Probabilità di sopravvivenza</p>
+                                <div class="" style="border-radius: 5px 5px 5px 5px; background-color: white;">
+                                    <div class="container" style="padding: 0;">
+
+                                        <!---->
+                                        <div id="container" style="width:100%; height:300px;"></div>
+                                        <!---->
+                                        
+                                    </div>
+    
+                                </div>
+                            </section>
+
                         <!--navicelle-->
                         <section class="container navicelle" id="navicelle" style="padding: 0; padding-top: 5%; padding-left: 2%;">
                             <p class="textbold-title"> Noleggio Navicelle</p>
@@ -1881,16 +1898,10 @@ marta
             <!--recensioni inutili-->
             <section style="overflow: scroll; padding-top: 5%; padding-bottom: 5%;" id="recensioni-inutili" class="container">
                     <p class="textbold-title" style="background-color: white;">Recensioni inutili</p>
-                    <script>
-                            $(function() {
-                              $.scrollify({
-                                section : ".example-classname",
-                              });
-                            });
-                          </script>
+
                     <div class="gallery" style=" overflow: scroll;  scroll-behavior: smooth; height: 25vh;">
                         <!--1-->
-                        <div class="container example-classname">
+                        <div class="container">
                             <div class="row">
                                 <div class="col-2">
                                     леонардо <br>
@@ -1951,7 +1962,7 @@ marta
                                         <div style="margin:1%;">
                                             <p class="" style="font-size: 0.8em;"> <i> </i> </p>
                                             <div>
-                                                <p class="randomText1" style="overflow: auto;"></p>
+                                                <p class="randomText" style="overflow: auto;"></p>
                                             </div>
                                         </div>
                                     </div>
@@ -1985,7 +1996,7 @@ marta
                                         </div>
                                         <div style="margin:1%;">
                                             <div>
-                                                <p class="randomText2" style="overflow: auto;"></p>
+                                                <p class="randomText" style="overflow: auto;"></p>
                                             </div>
                                         </div>
                                     </div>
@@ -2169,8 +2180,6 @@ marta
     <script src="js/random.js"></script>
     <script src="js/scroll.js"></script>
 
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-    <script src='https://npmcdn.com/flickity@2/dist/flickity.pkgd.js'></script>
 
 
 

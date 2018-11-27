@@ -35,8 +35,12 @@ body {
 }
 
 .conferma{
-  padding: 2%; 
-  background-color:#e9f0fa;
+  padding: 1%; 
+  background-color:rgba(251, 232, 232);
+  border-radius: 3px;
+  font-size: 0.7em;
+  border: 1px solid rgb(250, 167, 168);
+  font-weight: 700;
 }
 
 .tag-com-1{
