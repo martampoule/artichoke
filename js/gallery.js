@@ -1,4 +1,4 @@
-// external js: flickity.pkgd.js
+/* external js: flickity.pkgd.js
 
 var $carousel = $('.carousel').flickity({
     imagesLoaded: true,
@@ -40,6 +40,25 @@ var $carousel = $('.carousel').flickity({
   
   
   
+*/
+
+// external js: flickity.pkgd.js
+
+var $carouselMain = $('.carousel-main').flickity({
+  pageDots: false,
+});
+
+var $carouselNav = $('.carousel-nav').flickity({
+  contain: true,
+  pageDots: false,
+  prevNextButtons: false
+});
+
+$carouselNav.on( 'staticClick.flickity', function(  event, pointer, cellElement, cellIndex ) {
+  if ( cellElement ) {
+    $carouselMain.flickity( 'select', cellIndex );
+  }
   
+})
   
   
