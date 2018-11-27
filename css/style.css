@@ -37,8 +37,6 @@ body {
 .conferma{
   padding: 2%; 
   background-color:#e9f0fa;
-
-
 }
 
 .tag-com-1{
@@ -458,6 +456,7 @@ border-radius: 7px 7px 7px 7px;
   text-decoration: none;
   padding-right: 2%;
 }
+
 
 .navbar-blu-item-active{
   font-weight: 200;

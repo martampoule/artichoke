@@ -37,16 +37,9 @@ padding-right: 5%;
   fill: rgb(127, 206, 239);
 }
 
-/*esterno*/
-.flickity-prev-next-button.previous {
-  left: -40px;
-}
-.flickity-prev-next-button.next {
-  right: -40px;
-}
 
 .carousel-cell img {
-  display: block;
+
   height: 100%;
   z-index: 1;
 }
@@ -56,4 +49,14 @@ padding-right: 5%;
     z-index: 1;
     height:50vh;
   }
+}
+
+.previous {
+
+  transform: translateY(-100px) !important;
+}
+
+.next {
+
+  transform: translateY(-100px)!important;
 }
