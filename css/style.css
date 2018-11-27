@@ -327,15 +327,13 @@ border-radius: 7px 7px 7px 7px;
 
 .rect-azzurro-noangoli {
   background-color: #e9f0fa;
-  padding: 10px;
   border-style: solid;
   border-color: white;
   border-top: none;
-
   border-left: none;
   border-width: 1px;
   text-align: center;
-  padding: 2%;
+  padding-top: 1%;
   border-bottom: 1px solid gray;
 
 }
