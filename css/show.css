@@ -27,3 +27,7 @@
     right: 0;  
 
 }
+
+.slider:hover{
+background-color: rgba(18, 121, 201, 0.3);
+}

@@ -5,12 +5,10 @@ $(document).ready(function() {
 
 	//fai qualcosa clicchi elemento scroll to
     $(".scrollTo").click(function() {
-
-        
-        
+ 
     	// sposta tutto il contenuto fino a target
-        $([document.documentElement, document.body]).animate({
-            scrollTop: $("#target").offset().top
+        $("#recensioni-inutili").animate({
+            scrollTop: 1000
         }, 2000);
     
     });

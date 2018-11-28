@@ -53,8 +53,12 @@ marta
     <section class="d-sm-none d-md-block">
 
         <!--SLIDER SERVIZI-->
-        <section id="slider">
+        <section id="slider" style="z-index: 100;">
+
+
             <div style="padding: 5%;" class="container-show">
+
+                <!--contenuto-->
                 <div style="border-bottom: 1px solid rgba(128, 128, 128, 0.39);">
                     <p class="textlight" style="font-size: 1.5em;">
                         Hotel dei Cenos: Servizi
@@ -231,7 +235,11 @@ marta
             </div>
         </section>
 
-        <section id="close-container"></section>
+        <section id="close-container">
+                <div style="background-color: rgb(18, 121, 201); width: 70px; height: 50px; position: absolute; margin: 10%; margin-left: 56%; border-radius: 5px 0 0 5px; z-index: 100;" class="slider">
+                    <i class="fas fa-times" style="margin: 10%; margin-left: 15%; color: white; font-size: 2em;"></i>
+                </div>
+        </section>
 
 
         <!--NAVBAR______________________________________________________________________________________________________-->
@@ -585,12 +593,12 @@ marta
 
                         <!--galleria-->
                         <section class="gallery">
-                            <div class="hover-gallery">
+                            <div class="hover-gallery" style="z-index: 80;">
 
                                 <!--favoloso-->
                                 <div style="text-align: right; padding: 2%; font-size: 1em; background-color: white; width: 30vh; line-height: 1.2em;"
                                     class="float-right">
-                                    <span class="textbold">
+                                    <span class="textbold" style="color: rgb(5, 55, 126);">
                                         Favoloso
                                     </span>
                                     <div style="background-color: rgb(5, 55, 126); width: 40px; height: 40px; margin-left: 6%; border-radius: 5px 5px 5px 0;"
@@ -600,9 +608,9 @@ marta
                                         109 recensioni
                                     </span>
                                 </div>
-                                <div>
-aa
-                                    </div>
+                                <div style="color: white;">
+                                    testo
+                                </div>
 
                                 <div style="text-align: left; padding: 2%; font-size: 1em; background-color: white; width: 30vh; line-height: 1.2em;">
                                     <span class="textbold">
@@ -1941,10 +1949,11 @@ aa
             </div>
 
             <!--recensioni inutili-->
+            <p class="textbold-title" style="background-color: white;">Recensioni inutili</p>
             <section style="overflow: scroll; padding-top: 5%; padding-bottom: 5%;" id="recensioni-inutili" class="container">
-                <p class="textbold-title" style="background-color: white;">Recensioni inutili</p>
+                <!-- <p class="textbold-title" style="background-color: white;">Recensioni inutili</p>
 
-                <div class="gallery" style=" overflow: scroll;  scroll-behavior: smooth; height: 30vh;">
+                <div class="gallery" style=" overflow: scroll;  scroll-behavior: smooth; height: 30vh;"> -->
                     <!--1-->
                     <div class="container" id="target0">
                         <div class="row">
@@ -2054,7 +2063,7 @@ aa
                         </div>
 
                     </div>
-                </div>
+                <!-- </div> -->
             </section>
 
 

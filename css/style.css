@@ -618,3 +618,11 @@ background-color: yellow;
 .textlightbold:hover {
     color: black;
 }
+
+#recensioni-inutili {
+  position: relative;
+  overflow: scroll;
+  min-height: 200px ;
+  height: 70vh ;
+
+}
