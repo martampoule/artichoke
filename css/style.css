@@ -622,7 +622,9 @@ background-color: yellow;
 #recensioni-inutili {
   position: relative;
   overflow: scroll;
-  min-height: 200px ;
-  height: 70vh ;
-
+  min-height: 20vh ;
+  height: 30vh ;
+  overflow: hidden; 
+  scroll-behavior: [ auto | smooth ]; 
+  padding-bottom: 5%;
 }
