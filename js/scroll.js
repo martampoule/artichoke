@@ -1,17 +1,18 @@
 
-function scrollNav() {
-    $('#recensioni-inutili a').click(function(){  
-      //Toggle Class
-      $(".active").removeClass("active");      
-      $(this).closest('li').addClass("active");
-      var theClass = $(this).attr("class");
-      $('.'+theClass).parent('li').addClass('active');
-      //Animate
-      $('html, body').stop().animate({
-          scrollTop: $( $(this).attr('href') ).offset().top - 160
-      }, 400);
-      return false;
+
+//controllo se pagina è pront
+$(document).ready(function() {
+
+	//fai qualcosa clicchi elemento scroll to
+    $(".scrollTo").click(function() {
+
+        
+        
+    	// sposta tutto il contenuto fino a target
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("#target").offset().top
+        }, 2000);
+    
     });
-    $('.scrollTop a').scrollTop();
-  }
-  scrollNav();
+})
+
