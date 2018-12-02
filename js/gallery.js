@@ -1,5 +1,3 @@
-
-
 var $carouselMain = $('.carousel-main').flickity({
   pageDots: false,
 });
