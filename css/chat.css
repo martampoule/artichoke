@@ -1,173 +1,211 @@
 body {
-    margin: 0;
-    font-family: sans-serif;
-    -ms-overflow-style: scrollbar;
-    overflow-style: scrollbar;
-  
-  }
-  
-  main {
-    max-width: 100%;
+  margin: 0;
+  font-family: sans-serif;
 
 
-    position: relative;
-    display: flex;
-    flex-direction: column;
-  
-  }
-  
-  .chat-box-container {
-    margin: 0;
-    width: 100%;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    height: 30%;
-    height: 20vh;
-  
-  }
-  
-  .chat-box-header {
-    display: block;
-    text-align: center;
+}
 
-  
-  }
-  
-  .chat-box {
-    margin: 4px 4px 4px 4px;
-    border: 1px solid rgb(18, 121, 201, 0.1);
-    flex-grow: 1;
-    background-color: #FFF;
-    overflow-y: scroll;
-    border-radius: 5px 5px 5px 5px;
+main {
+  max-width: 100%;
 
-  }
-  
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.chat-box-container {
+  margin: 0;
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  height: 30%;
+  height: 20vh;
+
+}
+
+.chat-box-header {
+  display: block;
+  text-align: center;
+
+
+}
+
+.chat-box {
+  margin: 4px 4px 4px 4px;
+  border: 1px solid rgb(18, 121, 201, 0.1);
+  flex-grow: 1;
+  background-color: #FFF;
+  overflow-y: scroll;
+  border-radius: 5px 5px 5px 5px;
+
+}
+
+.chat-box p {
+  margin: 0;
+  padding: 6px;
+  font-size: 1em;
+}
+
+.ai-person-container {
+  display: block;
+  overflow: auto;
+}
+
+.ai,
+.person {
+  overflow: auto;
+  margin: 10px;
+  border: 2px solid black;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+
+
+.ai {
+  text-align: left;
+  margin-right: 36px;
+  border: 1px solid rgb(18, 121, 201, 0.1);
+  float: left;
+  border-bottom-left-radius: 0px;
+  background-color: #e9f0fa;
+}
+
+.person {
+  text-align: left;
+  margin-left: 36px;
+  border: 1px solid rgb(18, 121, 201, 0.1);
+  float: right;
+  border-bottom-right-radius: 0px;
+  background-color: #e9f0fa;
+}
+
+.ai-date,
+.person-date {
+  font-size: 10px;
+  clear: both;
+}
+
+.ai-date {
+  float: left;
+  margin-left: 6px;
+}
+
+.person-date {
+  float: right;
+  margin-right: 6px;
+}
+
+.chat-input-container {
+  position: relative;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+
+}
+
+/*QUI*/
+.chat-input {
+  height: 40px;
+  width: auto;
+  display: inline-block;
+  flex-grow: 1;
+  padding: 2px 2px 2px 2px;
+  margin: 0 4px 0 4px;
+  font-size: 1em;
+  border: 1px solid rgb(18, 121, 201, 0.1);
+  background-color: #ffffff; /*rgb(18, 121, 201) */
+  border-radius: 5px 5px 5px 5px;
+
+}
+
+.chat-input:focus {
+  outline: 0;
+}
+
+.chat-submit {
+  padding: 7px;
+  vertical-align: middle;
+  font-weight: 700;
+  color: white;
+  text-decoration: none solid rgb(255, 255, 255);
+  text-align: center;
+  background-color: rgb(18, 121, 201);
+  border: 4px, solid, white;
+  border-color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.55);
+  margin-right: 0.5%;
+}
+
+.chat-submit:hover {
+  cursor: pointer;
+  background-color: #003580;
+}
+
+.chat-submit:focus {
+  outline: 0;
+}
+
+@media screen and (max-width: 480px) {
   .chat-box p {
-    margin: 0;
-    padding: 6px;
-    font-size: 1em;
+    font-size: 30px;
   }
-  
-  .ai-person-container {
-    display: block;
-    overflow: auto;
-  }
-  
-  .ai,
-  .person {
-    overflow: auto;
-    margin: 10px;
-    border: 2px solid black;
-    border-radius: 8px;
-    display: inline-block;
-  }
-
-
-  
-  .ai {
-    text-align: left;
-    margin-right: 36px;
-    border: 1px solid rgb(18, 121, 201, 0.1);
-    float: left;
-    border-bottom-left-radius: 0px;
-    background-color: #e9f0fa;
-  }
-  
-  .person {
-    text-align: left;
-    margin-left: 36px;
-    border: 1px solid rgb(18, 121, 201, 0.1);
-    float: right;
-    border-bottom-right-radius: 0px;
-    background-color: #e9f0fa;
-  }
-  
-  .ai-date,
-  .person-date {
-    font-size: 10px;
-    clear: both;
-  }
-  
-  .ai-date {
-    float: left;
-    margin-left: 6px;
-  }
-  
-  .person-date {
-    float: right;
-    margin-right: 6px;
-  }
-  
-  .chat-input-container {
-    position: relative;
-    height: 60px;
-    width: 100%;
-    display: flex;
-    bottom: 0;
-    align-items: center;
-    justify-content: center;
-    overflow: auto;
-
-  }
-  
-  /*QUI*/
   .chat-input {
-    height: 40px;
-    width: auto;
-    display: inline-block;
-    flex-grow: 1;
-    padding: 2px 2px 2px 2px;
-    margin: 0 4px 0 4px;
-    font-size: 1em;
-    border: 1px solid rgb(18, 121, 201, 0.1);
-    background-color: #ffffff; /*rgb(18, 121, 201) */
-    border-radius: 5px 5px 5px 5px;
-
+    width: 60%;
+    float: left;
+    font-size: 28px;
   }
-  
-  .chat-input:focus {
-    outline: 0;
-  }
-  
   .chat-submit {
-    padding: 7px;
-    vertical-align: middle;
-    font-weight: 700;
-    color: white;
-    text-decoration: none solid rgb(255, 255, 255);
-    text-align: center;
-    background-color: rgb(18, 121, 201);
-    border: 4px, solid, white;
-    border-color: white;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.55);
-    margin-right: 0.5%;
+    float: right;
   }
-  
-  .chat-submit:hover {
-    cursor: pointer;
-    background-color: #003580;
-  }
-  
-  .chat-submit:focus {
-    outline: 0;
-  }
-  
-  @media screen and (max-width: 480px) {
-    .chat-box p {
-      font-size: 30px;
-    }
-    .chat-input {
-      width: 60%;
-      float: left;
-      font-size: 28px;
-    }
-    .chat-submit {
-      float: right;
-    }
-  }
- 
+
+
+.gallery {
+  max-width: 100%;
+  height: 458px;
+  background-color: #e9f0fa;
+  margin-bottom: 1%;
+}
+
+
+.button {
+  vertical-align: middle;
+  font-weight: 700;
+  color: white;
+  text-decoration: none solid rgb(255, 255, 255);
+  text-align: center;
+  background-color: rgb(18, 121, 201);
+  border: 4px, solid, white;
+  border-color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.55);
+}}
+
+
+.btn2:hover{
+text-decoration: underline;
+}
+
+.chat-button{
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.24);
+  z-index: 100;
+}
+

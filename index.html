@@ -34,6 +34,8 @@ marta
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 
+
+
     <!--STYLE-->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/chat.css">
@@ -1512,7 +1514,7 @@ marta
                             <p class="textbold-title"> Da non sapere  </p>
                                                     
                             <button class="button" onclick="mostra()"  style="margin-bottom: 3%;">
-                                    <a style="text-decoration: none; color: white;">
+                                    <a style="text-decoration: none; color: white;" id="tastoMostra">
                                         Mostra </a>
                                 </button>
                             <div class="" style="border-radius: 5px 5px 5px 5px; background-color: white; display: none;" id="mostra">
@@ -1533,8 +1535,10 @@ marta
                                     var x = document.getElementById("mostra");
                                     if (x.style.display === "none") {
                                         x.style.display = "block";
+                                        document.getElementById('tastoMostra').innerHTML = 'Nascondi';
                                     } else {
                                         x.style.display = "none";
+                                        document.getElementById('tastoMostra').innerHTML = 'Mostra';
                                     }
                                 }
                                 </script>
@@ -1543,7 +1547,7 @@ marta
                         <section class="container navicelle" id="navicelle" style="padding: 0; padding-top: 5%; padding-left: 2%;">
                             <p class="textbold-title"> Noleggio Navicelle  </p>
                             <button class="button" onclick="mostra2()" style="margin-bottom: 3%;">
-                                    <a style="text-decoration: none; color: white;">
+                                    <a style="text-decoration: none; color: white;" id="tastoMostra2">
                                         Mostra </a>
                                 </button>
                             <div class="container gallery-container" style="margin: 0; width: fit-content; display: none;" id="mostra2">
@@ -1977,8 +1981,10 @@ marta
                                         var x = document.getElementById("mostra2");
                                         if (x.style.display === "none") {
                                             x.style.display = "block";
+                                            document.getElementById('tastoMostra2').innerHTML = 'Nascondi';
                                         } else {
                                             x.style.display = "none";
+                                            document.getElementById('tastoMostra2').innerHTML = 'Mostra';
                                         }
                                     }
                                     </script>
@@ -2001,20 +2007,51 @@ marta
                         </section>
 
                         <!--chat-->
-                        <section class="container-fluid chat" style="padding-top:5%; padding-left: 0;" id="chat">
-                            <p class="textbold-title">Chatta con Hotel dei Cenos</p>
-                            <main id="main" class="gallery" style="height: auto;">
-                                <div class="chat-box-container">
-                                    <div class="chat-box">
 
+                        <div class="container">
+  
+  
+                                <div class="row mb-4">
+                                  <div class="" style="border-radius: 50px;">
+                              
+                                    <a href="#" class="btn btn-lg btn-primary chat-button" data-toggle="modal" data-target="#largeModal"><i class="fas fa-comment"></i></a>
+                                  </div>
+                                </div>
+                                
+                                
+                              </div>
+                              
+                              
+                              <div class="modal fade" id="largeModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                        <p class="textbold-title">Chatta con Hotel dei Cenos</p>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
                                     </div>
+                                    <div class="modal-body">
+                              
+                                      <main id="main" class="gallery" style="height: auto;">
+                                        <div class="chat-box-container">
+                                            <div class="chat-box">
+                              
+                                            </div>
+                                        </div>
+                                        <div class="chat-input-container">
+                                            <input class="chat-input" type="text" name="chat-input" value="">
+                                            <button class="chat-submit" type="button" name="submit">Invio</button>
+                                        </div>
+                                    </main>
+                              
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn2 btn-default" data-dismiss="modal">Chiudi</button>
+                                    </div>
+                                  </div>
                                 </div>
-                                <div class="chat-input-container">
-                                    <input class="chat-input" type="text" name="chat-input" value="">
-                                    <button class="chat-submit" type="button" name="submit">Invio</button>
-                                </div>
-                            </main>
-                        </section>
+                              </div>
                     </div>
                 </div>
             </div>
@@ -2279,7 +2316,6 @@ marta
     <!--SCRIPT-->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.min.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.min.js'></script>
@@ -2305,6 +2341,11 @@ marta
     <script src="js/random.js"></script>
     <script src="js/scroll.js"></script>
     <script src="js/randomNumber.js"></script>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src='https://unpkg.com/popper.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js'></script>
+
 
 <!--commenti su galleria-->
 <script>
