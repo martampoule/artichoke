@@ -1,8 +1,5 @@
 * {
-
   box-sizing: border-box;
-
-
 }
 
 body {
@@ -58,7 +55,6 @@ opacity: 80%;
   color: white;
   margin: 1%;
   font-size: 0.7em;
-  width: fit-content;
   padding: 0.5%;
   display: inline;
 }
@@ -637,6 +633,5 @@ background-color: yellow;
   min-height: 20vh ;
   height: 30vh ;
   overflow: hidden; 
-  scroll-behavior: [ auto | smooth ]; 
   padding-bottom: 5%;
 }

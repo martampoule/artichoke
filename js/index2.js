@@ -4,21 +4,6 @@
   
 
 
-    $("#servizi").click(function(e) {
-      if(!$("#slider").hasClass("slider-active")) {
-        $("#close-container").fadeIn("slow");
-        $("#slider").addClass("slider-active");
-      }
-    })
-
-    $("#close-container").click(function(e) {
-      if($("#slider").hasClass("slider-active")) {
-        $("#close-container").fadeOut("slow");
-        $("#slider").removeClass("slider-active");
-      }
-    })
-
-
     const responses = [
       "मैं आपकी भाषा को समझ नहीं पा रहा हूं",
       "हमें एक अनुवादक की जरूरत है",
@@ -34,9 +19,9 @@
       "हमारे होटल में रहें, आपको पछतावा नहीं होगा"
     ];
   
-    const submit = document.querySelector(".chat-submit");
-    const chatBox = document.querySelector(".chat-box");
-    const chatInput = document.querySelector(".chat-input");
+    const submit = document.querySelector(".chat-submit2");
+    const chatBox2 = document.querySelector(".chat-box2");
+    const chatInput2 = document.querySelector(".chat-input2");
   
     // const aiThinking = false;
   
@@ -72,21 +57,21 @@
       }
       const newChatDiv = chatTemplate({
         class: fromPerson ? "person" : "ai",
-        text: fromPerson ? chatInput.value.trim() : aiResponse(),
+        text: fromPerson ? chatInput2.value.trim() : aiResponse(),
         date: fromPerson ? new Date() : new Date(Date.now() + 2000)
       });
       if (!fromPerson) {
         // make it so it only responds once to multiple fast sentences
         setTimeout(function() {
-          chatBox.innerHTML += newChatDiv;
-          chatBox.scrollTop = chatBox.scrollHeight;
+          chatBox2.innerHTML += newChatDiv;
+          chatBox2.scrollTop = chatBox2.scrollHeight;
         }, 2000)
       } else {
-        chatBox.innerHTML += newChatDiv;
-        chatBox.scrollTop = chatBox.scrollHeight;
+        chatBox2.innerHTML += newChatDiv;
+        chatBox2.scrollTop = chatBox2.scrollHeight;
       }
       if (fromPerson) {
-        chatInput.value = "";
+        chatInput2.value = "";
         appendChatBox(false);
       }
     }

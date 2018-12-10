@@ -70,12 +70,12 @@ height: 100%;
 }
 
 .flickity-prev-next-button.previous {
-  left: -3.5vh;
-  top: 80%;
+  left: -3.6vh;
+  top: 85%;
 }
 .flickity-prev-next-button.next {
-  right: -3.5vh;
-  top: 80%;
+  right: -3.6vh;
+  top: 85%;
 }
 
 /* hover gallery */
