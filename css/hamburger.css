@@ -1,5 +1,6 @@
 .h-margin {
     margin: 3%;
+    margin-left: 5%;
 }
 
 .h-title-main {
@@ -33,7 +34,7 @@
 }
 
 .h-border {
-    border-bottom: 1px solid #cecece;
+    border-bottom: 6px solid #f0f0f0;
     padding-bottom: 1%;
 }
 
@@ -48,4 +49,25 @@
     -ms-transform: rotate(180deg);
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
+}
+
+.h-tabella-testo {
+    font-size: 0.9em;
+    vertical-align: middle;
+    font-weight: 700;
+}
+
+.h-valutazione {
+    height: 30px;
+    width: 30px;
+    border: 1px solid rgb(18, 121, 201);
+    text-align: center;
+    border-radius: 5px 5px 5px 5px;
+    padding-top: 10%;
+    color: rgb(18, 121, 201);
+    font-weight: 700;
+}
+
+.h-border2{
+    border-bottom: 1px solid #f3f3f3;
 }

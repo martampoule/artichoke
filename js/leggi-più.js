@@ -77,3 +77,25 @@ $(document).ready(function() {
       document.getElementById("pianetiSB").innerText = "+"
     }
   }
+
+  function commentiS() {
+    var x = document.getElementById("commentiS");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+      document.getElementById("commentiSB").innerText = "-"
+    } else {
+      x.style.display = "none";
+      document.getElementById("commentiSB").innerText = "+"
+    }
+  }
+
+  function commenti1S() {
+    var x = document.getElementById("commenti1S");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+      document.getElementById("commenti1SB").innerText = "-"
+    } else {
+      x.style.display = "none";
+      document.getElementById("commenti1SB").innerText = "+"
+    }
+  }

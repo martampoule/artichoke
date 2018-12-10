@@ -29,6 +29,21 @@ $(document).ready(function() {
     });
 })
 
+$(document).ready(function() {
+
+    var numbers = ["13AB4D", "21HG3D", "34UI2F", "55TZ7S", "89NM7O"];
+
+    var count = 0;
+    setInterval(function() {
+
+        if(count < 1) {
+            var rand = numbers[Math.floor(Math.random() * numbers.length)];
+            $(".personeNumber2").append(rand);
+        }
+        count++;
+    });
+})
+
 
 
 

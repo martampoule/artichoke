@@ -330,6 +330,17 @@ border-radius: 7px 7px 7px 7px;
   padding-top: 5%;
 }
 
+.dintorni2 {
+
+  border-style: solid;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-width: 1px;
+  border-color: #f3f3f3;
+  padding-top: 5%;
+}
+
 .rect-azzurro-noangoli {
   background-color: #e9f0fa;
   border-style: solid;

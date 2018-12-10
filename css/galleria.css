@@ -70,11 +70,11 @@ height: 100%;
 }
 
 .flickity-prev-next-button.previous {
-  left: -4vh;
+  left: -3.5vh;
   top: 80%;
 }
 .flickity-prev-next-button.next {
-  right: -4vh;
+  right: -3.5vh;
   top: 80%;
 }
 
