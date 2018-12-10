@@ -1,0 +1,51 @@
+.h-margin {
+    margin: 3%;
+}
+
+.h-title-main {
+    font-size: 1.2em;
+    margin: 0;
+    padding: 0;
+}
+
+.h-g-text {
+    font-size: 0.9em;
+}
+
+.h-r-div {
+    background-color: #e21111;
+    color: white;
+    padding: 0.5%;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-top: 3%;
+    width: fit-content;
+    border-radius: 5px 5px 5px 5px;
+    font-size: 1em;
+}
+
+.h-g-div {
+    background-color: rgb(255, 210, 87);
+    width: 100%;
+    height: fit-content;
+    padding: 3%;
+    margin-top: 3%;
+}
+
+.h-border {
+    border-bottom: 1px solid #cecece;
+    padding-bottom: 1%;
+}
+
+.h-title {
+    color: rgb(18, 121, 201);
+    font-weight: 700;
+}
+
+.vietatoS {
+    border-radius: 5px 5px 5px 5px;
+    height: max-content;
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}

@@ -49,6 +49,7 @@ marta
     <link rel="stylesheet" href="css/show.css">
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/text.css">
+    <link rel="stylesheet" href="css/hamburger.css">
 
 
 </head>
@@ -699,7 +700,7 @@ marta
 
                         <!--quadratini gallery-->
                         <section>
-                            <div class="carousel carousel-nav" style="float-left;">
+                            <div class="carousel carousel-nav"> <!--style="float-left;"-->
                                 <div class="carousel-cell"><img src="img/mondi/quadrat/01.png" alt=""></div>
                                 <div class="carousel-cell"><img src="img/mondi/quadrat/02.png" alt=""></div>
                                 <div class="carousel-cell"><img src="img/mondi/quadrat/03.png" alt=""></div>
@@ -1441,11 +1442,6 @@ marta
                                                 </span>
                                             </span>
                                         </p>
-
-
-
-
-
                                     </div>
                                     <div class="col">
                                         <p> <span style="font-size: 1.2em;">
@@ -2372,62 +2368,1002 @@ Tutti bambini di età inferiore a 2 anni soggiornano gratuitamente. Ogni rumore 
         <section>
         </section>
 
-        <!--titolo-->
-        <section>
-            <p>Hotel dei Cenos</p>
+        <!--TITOLO-->
+        <section class="h-margin">
+            <p class="h-title-main">Hotel dei Cenos</p>
+         <span class="fa fa-star checked" style="font-size: 0.6em; color: orange;"></span>
+         <span class="fa fa-star checked" style="font-size: 0.6em; color: orange;"></span>
+         <span class="fa fa-star checked" style="font-size: 0.6em; color: orange;"></span>
+         <span class="fa fa-star checked" style="font-size: 0.6em; color: orange;"></span>
+         <span class="fa fa-star checked" style="font-size: 0.6em; color: orange;"></span> <br>
+         <span class="h-g-text">Terra di Kandar V,
+                Alpha Centauri, Proxima B Centauri
+                – </span>
+                <div class="h-r-div"> Altre 6 persone stanno guardando ora</div>
         </section>
 
-        <!--giallo-->
-        <section>
+        <!--GIALLO-->
+        <section class="h-g-div">
+                        <p class="textbold" style=""> DISPONIBILITÀ </p>
+                        <p style="font-size: 0.85em; font-weight: 700; margin-bottom: 1%;">Check-in</p>
+                        <input id="startDate3"/>
+                        <p style="font-size: 0.85em; font-weight: 700; margin-bottom: 1%;">Check-out</p>
+                        <input id="endDate3"/>
+                        <br>
+                        <button class="button-giallo prenota-ora" onclick="alertBoxGiallo()" style="width: 100%;">
+                            <a style="text-decoration: none; color: white;">
+                                Verifica disponibilità </a>
+                        </button>
+                        <br>
+
+                        <!--script calendario-->
+                        <script>
+                            var today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
+                            $('#startDate3').datepicker({
+                                uiLibrary: 'bootstrap4',
+                                iconsLibrary: 'fontawesome',
+                                minDate: today,
+                                maxDate: function () {
+                                    return $('#endDate').val();
+                                }
+                            });
+                            $('#endDate3').datepicker({
+                                uiLibrary: 'bootstrap4',
+                                iconsLibrary: 'fontawesome',
+                                minDate: function () {
+                                    return $('#startDate3').val();
+                                }
+                            });
+                        </script>
+                        <!--script calendario risposta-->
+                        <script>
+                            function alertBoxGiallo() {
+                                    var txt;
+                                    if (confirm("Abbiamo preso in carico la sua richiesta")) {
+                                        txt = "La prima data disponibile è nel 3018";
+                                    } else {
+                                        txt = "Abbiamo cancellato la tua richiesta";
+                                    }
+                                    document.getElementById("risposta2").innerHTML = txt;
+                                }
+                        </script>
         </section>
 
-        <!--gallery-->
-        <section>
-        </section>
-
-        <!--favoloso-->
-        <div>
+        <!--GALLERIA-->
+        <div class="gallery-container" id="galleria" style="margin-top: 5%;">
+                    <div class="carousel carousel-main">
+                        <div class="carousel-cell"><img src="img/mondi/03.png" alt=""></div>
+                        <div class="carousel-cell"><img src="img/mondi/02.png" alt=""></div>
+                        <div class="carousel-cell"><img src="img/mondi/01.png" alt=""></div>
+                        <div class="carousel-cell"><img src="img/mondi/04.png" alt=""></div>
+                        <div class="carousel-cell"><img src="img/mondi/05.png" alt=""></div>
+                        <div class="carousel-cell"><img src="img/mondi/06.png" alt=""></div>
+                        <div class="carousel-cell"><img src="img/mondi/07.png" alt=""></div>
+                        <div class="carousel-cell"><img src="img/mondi/08.png" alt=""></div>
+                        <div class="carousel-cell"><img src="img/mondi/09.png" alt=""></div>
+                        <div class="carousel-cell"><img src="img/mondi/10.png" alt=""></div>
+                        <div class="carousel-cell"><img src="img/mondi/11.png" alt=""></div>
+                        <div class="carousel-cell"><img src="img/mondi/12.png" alt=""></div>
+                        <div class="carousel-cell"><img src="img/mondi/13.png" alt=""></div>
+                        <div class="carousel-cell"><img src="img/mondi/15.png" alt=""></div>
+                        <div class="carousel-cell"><img src="img/mondi/16.png" alt=""></div>
+                        <div class="carousel-cell"><img src="img/mondi/17.png" alt=""></div>
+                        <div class="carousel-cell"><img src="img/mondi/18.png" alt=""></div>
+                        <div class="carousel-cell"><img src="img/mondi/19.png" alt=""></div>
+                        <div class="carousel-cell"><img src="img/mondi/20.png" alt=""></div>
+                        <div class="carousel-cell"><img src="img/mondi/21.png" alt=""></div>
+                        <div class="carousel-cell"><img src="img/mondi/22.png" alt=""></div>
+                    </div>
         </div>
 
-        <!--descrizione-->
-        <div>
+        <!--FAVOLOSO-->
+        <div class="h-border">
+            <div class="row h-margin">
+                <div class="col-2">
+                    <div style="background-color: rgb(5, 55, 126); width: 50px; height: 50px; border-radius: 5px 5px 5px 0;"class="float-left"> 
+                        <div style="text-align: center; margin-top: 30%; color: white;" class="textbold">
+                        9,9
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <span style="color:rgb(5, 55, 126); font-size: 0.9em;"> Favoloso </span> <br> <span class="h-g-text">32 recensioni</span>
+                </div>
+            </div>
         </div>
         
-        <!--servizi-->
-        <div>
-        </div>
+        <!--DESCRIZIONE-->
+        <section class="h-border" style="padding-bottom: 0;">
+            <div class="h-margin">
+            <p class="h-g-text" style="text-justify: inter-character;">
+                    L’hotel dei Cenos sorge in un isola di 250 km per 65 km posizionato in un
+                    nuovo
+                    mondo chiamato Proxima B Centaur, affichè possa ospitare i viaggiatori
+                    provenienti dai sistemi solari adiacenti. <br>
 
-        <!--prenotaz del giorno-->
-        <div>
-        </div>
+                    Sarai ben accolto dagli abitanti del posto, alieni, che spesso organizzano
+                    feste all’arrivo del turista. <br>
 
-        <!--info sui trasporti-->
-        <div>
-        </div>
+                    <span  id="text" style="display: none;">
+                            
+                                    Il ristorante tipico dell’Hotel, situato al 100° piano, offre una vista
+                                    panoramica della isola e serve piatti tipici della cucina Cenos. <br>
+                
+                                    Dall’isola dell’Hotel Cenos dovrete prendere il Razzo Crew Dragon, per
+                                    raggiungere facilmente.
+
+                    Tutte le celle supertecnologiche dell’ Hotel Cenos dal diametro di 8 metri
+                    ciascuna sono rivestite in vetro offrono ottimi servizi, permettendo così
+                    agli
+                    occupanti di vedere all’esterno in qualsiasi condizione ambientale. La
+                    sensazione è quella stare all’esterno,ma contemporaneamente in un esclusivo
+                    hotel in perfetta intimità all’interno. Le celle sono dotate di letti dalla
+                    forma irregolare, televisione che trasmette i canali del posto in lingua
+                    aliena. Ampie finestre e spaziosi bagni moderni.
+                    </span>
+                    <a id="toggle" style="    color: rgb(18, 121, 201);">Leggi di più</a>
+                        
+            </p>  
+            </div>
+        </section>
         
-        <!--Stazioni spaziali vicine-->
-        <div>
+        <!--SERVIZI-->
+        <section class="h-border">
+            <div class="h-margin">
+                <div class="row" style="margin: 0;">
+            <p class="h-title col" style="margin: 0; padding: 0;">SERVIZI</p>
+            <p class="col float-right" style="text-align: right; font-weight: 700; color: rgb(18, 121, 201);" onclick="serviziS();" id="serviziSB">+</p>
         </div>
+        <p class="h-g-text"> <i class="fas fa-parking" style="font-size: 1em; margin-right: 10px; line-height: 1.2em;"></i>
+            parcheggio &nbsp &nbsp
+            <i class="fa fa-home" style="margin-right: 10px;"></i>disponibilità
+            di camere familiari &nbsp &nbsp
+            <i class="fas fa-ankh" style=" margin-right: 10px;"></i>navetta
+            aeroportuale &nbsp &nbsp
+            <i class="fa fa-wifi" style=" margin-right: 10px;"></i>
+            camere non fumatori &nbsp &nbsp
+            <i class="fa fa-glass" style="margin-right: 10px;"></i>
+            bar
+        </p>
+        <div id="serviziS" style="display: none;">
+                <div class="row">
+                        <div class="col">
+                                <p> <span style="font-size: 1.2em;">
+                                        <i class="fas fa-info"></i> <span class="textlight" style="font-size: 0.9em;">Servizi
+                                            generali </span> <br>
+                                        <span style="font-size: 0.7em;">
+                                            <i class="fas fa-check" style="color: #0077cc; font-size: 0.7em;"></i>
+                                            Televisore
+                                            <br>
+                                            <i class="fas fa-check" style="color: #0077cc; font-size: 0.7em;"></i>
+                                            Telefono
+                                            <br>
+                                            <i class="fas fa-check" style="color: #0077cc; font-size: 0.7em;"></i>
+                                            Noleggio
+                                            navicelle <br>
+                                            <i class="fas fa-check" style="color: #0077cc; font-size: 0.7em;"></i>
+                                            Cassaforte
+                                            <br>
+    
+                                        </span>
+                                    </span>
+                                </p>
+    
+                                <p> <span style="font-size: 1.2em;">
+                                        <i class="fas fa-comment"></i> <span class="textlight" style="font-size: 0.9em;">Lingue
+                                            parlate</span> <br>
+                                        <span style="font-size: 0.7em;">
+                                            <i class="fas fa-check" style="color: #0077cc; font-size: 0.7em; "></i>Cenos
+                                            <br>
+                                            <i class="fas fa-check" style="color: #0077cc; font-size: 0.7em; "></i>
+                                            Italiano
+                                            <br>
+                                            <i class="fas fa-check" style="color: #0077cc; font-size: 0.7em;"></i>
+                                            Spagnolo
+                                            <br>
+                                            <i class="fas fa-check" style="color: #0077cc; font-size: 0.7em;"></i>
+                                            Inglese
+                                            <br>
+                                        </span>
+                                    </span>
+                                </p>
+                            <p> <span style="font-size: 1.2em;">
+                                    <i class="fas fa-space-shuttle"></i> <span class="textlight" style="font-size: 0.9em;">
+                                        Trasporti </span> <br>
+                                    <span style="font-size: 0.7em;">
+                                        <i class="fas fa-check" style="color: #0077cc; font-size: 0.7em; "></i>
+                                        Navetta
+                                        per lo
+                                        spazioporto <br>
+                                        <i class="fas fa-check" style="color: #0077cc; font-size: 0.7em; "></i>
+                                        Navetta
+                                        dallo
+                                        spazioporto <br>
 
-        <!--pianeti vicini-->
-        <div>
-        </div>
+                                    </span>
+                                </span>
+                            </p>
 
-        <!--Stella madre-->
-        <div>
-        </div>
+                            <p> <span style="font-size: 1.2em;">
+                                    <i class="fas fa-broom"></i> <span class="textlight" style="font-size: 0.9em;">Servizi
+                                        di pulizia </span> <br>
+                                    <span style="font-size: 0.7em;">
+                                        <i class="fas fa-check" style="color: #0077cc; font-size: 0.7em; "></i>
+                                        Servizio
+                                        pulizie giornaliero <br>
+                                        <i class="fas fa-check" style="color: #0077cc; font-size: 0.7em; "></i>
+                                        Servizio
+                                        stireria <br>
+                                        <i class="fas fa-check" style="color: #0077cc; font-size: 0.7em; "></i>
+                                        Lavaggio a
+                                        secco <br>
+                                        <i class="fas fa-check" style="color: #0077cc; font-size: 0.7em; "></i>
+                                        Servizio
+                                        lavanderia <br>
 
-        <!--vietato leggere questa sezione-->
-        <div>
-        </div>
+                                    </span>
+                                </span>
+                            </p>
+                            <p> <span style="font-size: 1.2em;">
+                                    <i class="fas fa-cat"></i> <span class="textlight" style="font-size: 0.9em;">Animali</span>
+                                    <br>
+                                    <span style="font-size: 0.7em;">
+                                        <i class="fas fa-check" style="color: #0077cc; font-size: 0.7em; "></i>
+                                        Non
+                                        ammessi
+                                        <br>
+                                    </span>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="col">
+                                <p> <span style="font-size: 1.2em;">
+                                        <i class="fas fa-male"></i> <span class="textlight" style="font-size: 0.9em;">Servizi
+                                            accoglienza </span> <br>
+                                        <span style="font-size: 0.7em;">
+                                            <i class="fas fa-check" style="color: #0077cc; font-size: 0.7em; "></i>
+                                            Servizio
+                                            concierge <br>
+                                            <i class="fas fa-check" style="color: #0077cc; font-size: 0.7em; "></i>
+                                            Deposito
+                                            bagagli <br>
+                                            <i class="fas fa-check" style="color: #0077cc; font-size: 0.7em; "></i>
+                                            Banco
+                                            escursioni <br>
+                                            <i class="fas fa-check" style="color: #0077cc; font-size: 0.7em; "></i>
+                                            Cambio
+                                            valuta
+                                            <br>
+                                            <i class="fas fa-check" style="color: #0077cc; font-size: 0.7em; "></i>
+                                            Reception
+                                            24
+                                            ore su 24 <br>
+                                        </span>
+                                    </span>
+                                </p>
+                                <p> <span style="font-size: 1.2em;">
+                                        <i class="fas fa-parking"></i> <span class="textlight" style="font-size: 0.9em;">
+                                            Parcheggio </span> <br>
+                                        <span style="font-size: 0.7em;">
+                                            Parcheggio privato disponibile in loco senza prenotazione al
+                                            costo
+                                            di <br> 25 CEN al giorno.<br>
+    
+                                        </span>
+                                    </span>
+                                </p>
+                            <p> <span style="font-size: 1.2em;">
+                                    <i class="fas fa-utensils"></i> <span class="textlight" style="font-size: 0.9em;">Servizi
+                                        ristorazione </span> <br>
+                                    <span style="font-size: 0.7em;">
+                                        <i class="fas fa-check" style="color: #0077cc; font-size: 0.7em; "></i>
+                                        Snack bar
+                                        <br>
+                                        <i class="fas fa-check" style="color: #0077cc; font-size: 0.7em; "></i>
+                                        Ristorante
+                                        24h
+                                        <br>
+                                        <i class="fas fa-check" style="color: #0077cc; font-size: 0.7em; "></i>
+                                        Caffè
+                                        buono!
+                                        <br>
 
-        <!--da non sapere-->
-        <div>
+                                        <i class="fas fa-check" style="color: #0077cc; font-size: 0.7em; "></i>
+                                        Riso
+                                        sfrigolante <br>
+                                    </span>
+                                </span>
+                            </p>
+                            <p> <span style="font-size: 1.2em;">
+                                    <i class="fas fa-gamepad"></i> <span class="textlight" style="font-size: 0.9em;">
+                                        Intrattenimento </span> <br>
+                                    <span style="font-size: 0.7em;">
+                                        <i class="fas fa-check" style="color: #0077cc; font-size: 0.7em; "></i>
+                                        Servizio
+                                        baby-sitter <br>
+                                        <i class="fas fa-check" style="color: #0077cc; font-size: 0.7em; "></i>
+                                        Visite
+                                        guidate<br>
+
+                                    </span>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
         </div>
+        </div>
+        </section>
+
+        <!--DINTORNI-->
+        <section class="h-border">
+                <div class="h-margin">
+                    <div class="row" style="margin: 0;">
+                <p class="h-title col" style="margin: 0; padding: 0;">DINTORNI</p>
+                <p class="col float-right" style="text-align: right; font-weight: 700; color: rgb(18, 121, 201);" onclick="stazioniS();" id="stazioniSB">+</p>
+            </div>
+            <p class="h-g-text" style="margin-top:3%; font-weight: 700;">Pianeti vicini</p>
+            <div class="dintorni">
+                <p class="textlight">Terra
+                    <span style="float:right;">
+                        4,224 anni luce</span>
+                </p>
+            </div>
+            <div class="dintorni">
+                <p class="textlight">Trappist-1 e
+                    <span style="float:right;">
+                        39 anni luce</span>
+                </p>
+            </div>
+            <div class="dintorni">
+                <p class="textlight">Gliese 667 Cc
+                    <span style="float:right;">
+                        23,62 anni luce</span>
+                </p>
+            </div>
+            <div class="dintorni" style="border-bottom: none;">
+                <p class="textlight">Kepler-442 b
+                    <span style="float:right;">
+                        1291,6 anni luce</span>
+                </p>
+            </div> <br>
+
+            <div id="stazioniS" style="display: none;">
+
+                                <!--griglia destra-->
+                                    <p class="h-g-text" style="margin-top:3%; font-weight: 700;">Stazioni spaziali vicine</p>
+                                    <div class="dintorni">
+                                        <p class="textlight">Spazioporto Salyut
+                                            <span style="float:right;">
+                                                802 km</span>
+                                        </p>
+                                    </div>
+                                    <div class="dintorni">
+                                        <p class="textlight">Aerospazio Skylab
+                                            <span style="float:right;">
+                                                774 km </span>
+                                        </p>
+                                    </div>
+                                    <div class="dintorni">
+                                        <p class="textlight">Turbospazio Mir
+                                            <span style="float:right;">
+                                                825 km</span>
+                                        </p>
+                                    </div>
+                                    <div class="dintorni" style="border-bottom: none;">
+                                        <p class="textlight">Stazione Spaziale Internazionale (ISS)
+                                            <span style="float:right;">
+                                                1356 km</span>
+                                        </p>
+                                    </div> <br>
+            </div>
+            </div>
+            </section>
+
+        <!--CARATTERISTICHE-->
+        <section class="h-border">
+                <div class="h-margin">
+                    <div class="row" style="margin: 0;">
+                <p class="h-title col" style="margin: 0; padding: 0;">CARATTERISTICHE</p>
+                <p class="col float-right" style="text-align: right; font-weight: 700; color: rgb(18, 121, 201);" onclick="pianetiS();" id="pianetiSB">+</p>
+            </div>
+            <p class="h-g-text" style="margin-top:3%; font-weight: 700;">Stella madre</p>
+            <div class="dintorni">
+                <p class="textlight">Ascensione
+                    <span style="float:right;">
+                        14h 29m 42.94853s</span>
+                </p>
+            </div>
+            <div class="dintorni">
+                <p class="textlight">Grandezza apparente
+                    <span style="float:right;">
+                        11.13 Mv</span>
+                </p>
+            </div>
+            <div class="dintorni">
+                <p class="textlight">Declinazione
+                    <span style="float:right;">
+                        −62° 40′ 46.1631″</span>
+                </p>
+            </div>
+            <div class="dintorni" style="border-bottom: none">
+                <p class="textlight">Tipo spettrale
+                    <span style="float:right;">
+                        M5.5Ve</span>
+                </p>
+            </div> <br>
+            <div id="pianetiS" style="display: none;">
+                                <!--griglia destra-->
+                                    <p class="h-g-text" style="margin-top:3%; font-weight: 700;">Caratteristiche fisiche</p>
+                                    <div class="dintorni">
+                                        <p class="textlight">Massa minima
+                                            <span style="float:right;">
+                                                1.27 +0.19
+                                                -0.17 (M)</span>
+                                        </p>
+                                    </div>
+                                    <div class="dintorni">
+                                        <p class="textlight">Flusso stellare
+                                            <span style="float:right;">
+                                                0,65 (F) </span>
+                                        </p>
+                                    </div>
+                                    <div class="dintorni">
+                                        <p class="textlight">Temperatura
+                                            <span style="float:right;">
+                                                234 (K) </span>
+                                        </p>
+                                    </div>
+                                    <div class="dintorni" style="border-bottom: none;">
+                                        <p class="textlight">Periodo orbitale
+                                            <span style="float:right;">
+                                                11.186 +0.001
+                                                -0,002 (P)</span>
+                                        </p>
+                                    </div>
+
+
+            </div>
+            </div>
+            </section>
+
+
+        <!--VIETATO-->
+        <section class="h-border">
+                <div class="h-margin">
+                    <div class="row" style="margin: 0;">
+                <p class="h-title col" style="margin: 0; padding: 0;">VIETATO LEGGERE</p>
+                <p class="col float-right" style="text-align: right; font-weight: 700; color: rgb(18, 121, 201);" onclick="vietatoS();" id="vietatoSB">+</p>
+            </div>
+            <div class="row vietatoS h-g-text" style="padding: 3%">
+                    <div class="col">
+                            <p class="h-g-text" style="line-height: 1em;">                                    
+                                Le condizioni relative alla cancellazione della memoria e al pagamento anticipato del servizio variano a seconda della tipologia di essere vivente.
+                            </p>
+                        </div>
+                        <div class="col-4">
+                                <p class="h-g-text" style="line-height: 1em;">
+                                        <i class="fas fa-info-circle"></i>  Cancellazione /
+                                    Pagamento anticipato
+                                </p>
+                            </div>
+
+            </div>
+            <div id="vietatoS" style="display: none;">
+                            <div class="vietatoS h-g-text h-margin" style="">
+                                
+                                <div class="row" style="padding: 3%;">
+                                    
+
+                                </div>
+                                <div class="row" style="padding: 3%;">
+                                        
+                                        <div class="col">
+                                            <p class="h-g-text" style="line-height: 1em;">                                    
+                                                    Animali ferocissimi sono presenti nei dintorni dell'Hotel dei Cenos.
+                                            </p>
+                                        </div>
+                                        <div class="col-4">
+                                                <p class="h-g-text" style="line-height: 1em;">
+                                                        <i class="fas fa-cat"></i>   Animali
+                                                </p>
+                                            </div>
+                                </div>
+
+                                <div class="row" style="padding: 3%;">
+                                    
+                                        <div class="col">
+                                            <p class="h-g-text" style="line-height: 1em;">                                    
+                                                    I bambini e gli adolescenti non sono i benvenuti.
+
+Tutti bambini di età inferiore a 2 anni soggiornano gratuitamente. Ogni rumore o pianto attiverà il servizio "sheron ke munh mein" e il fanciullo in questione verrà trasportato con priorità nella gabbia degli sher.
+                                            </p>
+                                        </div>
+                                        <div class="col-4">
+                                                <p class="h-g-text" style="line-height: 1em;">
+                                                     <i class="fas fa-child"></i>   Bambini e Adolescenti
+                                                </p>
+                                            </div>
+                                </div>
+
+                                <div class="row" style="padding: 3%;">
+                                        
+                                        <div class="col">
+                                            <p class="h-g-text" style="line-height: 1em;">                                    
+                                                   Hotel dei Cenos accetta qualsiasi tipo di carta di credito e si riserva il diritto di richiedere pagamenti in natura.
+                                            </p>
+                                        </div>
+                                        <div class="col-4">
+                                                <p class="h-g-text" style="line-height: 1em;">
+                                               <i class="far fa-credit-card"></i>  Carte di credito accettate presso questo hotel
+                                                </p>
+                                            </div>
+                                </div>
+
+
+
+                            </div>
+            </div>
+            </div>
+            </section>
+
+        <!--DA NON SAPERE-->
+        <section class="h-border">
+                <div class="h-margin">
+                    <div class="row" style="margin: 0;">
+                <p class="h-title col" style="margin: 0; padding: 0;">DA NON SAPERE</p>
+            </div>
+            <div class="container" style="padding: 0; margin-top: 10%;">
+                    <!---->
+                    <div id="container2" style="width:100%; height:300px;"></div>
+                    <!---->
+
+                </div>
+            </div>
+            </section>
 
         <!--noleggio navicelle-->
-        <div>
-        </div>
+        <section class="h-border">
+                <div class="h-margin">
+                    <div class="row" style="margin: 0;">
+                <p class="h-title col" style="margin: 0; padding: 0;">NOLEGGIO NAVICELLE</p>
+                <p class="col float-right" style="text-align: right; font-weight: 700; color: rgb(18, 121, 201);" onclick="noleggioS();" id="noleggioSB">+</p>
+            </div>
+            <div class="conferma"> 3 persone hanno appena noleggiato una navicella</div>
+            <div id="contentConferma2"> </div>
+            <div id="noleggioS" style="display: none;">
+                            <div class="container gallery-container" style="margin: 0; width: fit-content;" id="mostra2">
+                                <div class="tz-gallery">
+                                    <div class="row">
+                                        <!--1-->
+                                        <div class="col-sm-6 col-md-3">
+                                                <p class="textlight" style="padding-top:3%;">Huygens </p>
+                                            <a class="lightbox">
+                                                <div class="container1">
+                                                    <img src="img/navicelle/1.jpg" alt="Avatar" class="image1">
+                                                    <div class="overlay1 row">
+
+                                                        <div class="col" style="margin: 5%;">
+                                                            <p class="text1 textbold" style="position: relative;">
+                                                                Potenza</p>
+                                                            <p class="text1 textbold" style="position: relative;">
+                                                                Massa</p>
+                                                            <p class="text1 textbold" style="position: relative;">
+                                                                Posti</p>
+                                                            <button class="button" style=" font-size: 0.9em; padding: 0.1em; padding-left: 0.4em; padding-right: 0.4em;"
+                                                                onclick="noleggiata();"> noleggia</button>
+                                                        </div>
+                                                        <div class="col" style="margin: 5%;">
+                                                            <p class="text1 textlight" style="position: relative;">
+                                                                640
+                                                                W</p>
+                                                            <p class="text1 textlight" style="position: relative;">
+                                                                2
+                                                                523 kg</p>
+                                                            <p class="text1 textlight" style="position: relative;">
+                                                                9
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </a>
+                                        </div>
+                                        <!--2-->
+                                        <div class="col-sm-6 col-md-3">
+                                                <p class="textlight" style="padding-top:3%;">Cluster</p>
+                                            <a class="lightbox">
+                                                <div class="container1">
+                                                    <img src="img/navicelle/2.jpg" alt="Avatar" class="image1">
+                                                    <div class="overlay1 row">
+
+                                                        <div class="col" style="margin: 5%;">
+                                                            <p class="text1 textbold" style="position: relative;">
+                                                                Potenza</p>
+                                                            <p class="text1 textbold" style="position: relative;">
+                                                                Massa</p>
+                                                            <p class="text1 textbold" style="position: relative;">
+                                                                Posti</p>
+                                                                <button class="button" style=" font-size: 0.9em; padding: 0.1em; padding-left: 0.4em; padding-right: 0.4em;"
+                                                                onclick="noleggiata();"> noleggia</button>
+                                                        </div>
+                                                        <div class="col" style="margin: 5%;">
+                                                            <p class="text1 textlight" style="position: relative;">
+                                                                740
+                                                                W</p>
+                                                            <p class="text1 textlight" style="position: relative;">
+                                                                1950 kg</p>
+                                                            <p class="text1 textlight" style="position: relative;">
+                                                                1</p>
+                                                        </div>
+
+
+
+                                                    </div>
+                                                </div>
+
+                                            </a>
+                                        </div>
+                                        <!--3-->
+                                        <div class="col-sm-6 col-md-3">
+                                                <p class="textlight" style="padding-top:3%;">Dragon</p>
+                                            <a class="lightbox">
+                                                <div class="container1">
+                                                    <img src="img/navicelle/3.jpg" alt="Avatar" class="image1">
+                                                    <div class="overlay1 row">
+
+                                                        <div class="col" style="margin: 5%;">
+                                                            <p class="text1 textbold" style="position: relative;">
+                                                                Potenza</p>
+                                                            <p class="text1 textbold" style="position: relative;">
+                                                                Massa</p>
+                                                            <p class="text1 textbold" style="position: relative;">
+                                                                Posti</p>
+                                                                <button class="button" style=" font-size: 0.9em; padding: 0.1em; padding-left: 0.4em; padding-right: 0.4em;"
+                                                                onclick="noleggiata();"> noleggia</button>
+                                                        </div>
+                                                        <div class="col" style="margin: 5%;">
+                                                            <p class="text1 textlight" style="position: relative;">
+                                                                800
+                                                                W</p>
+                                                            <p class="text1 textlight" style="position: relative;">
+                                                                4056 kg</p>
+                                                            <p class="text1 textlight" style="position: relative;">
+                                                                5
+                                                            </p>
+                                                        </div>
+
+
+
+                                                    </div>
+                                                </div>
+
+                                            </a>
+                                        </div>
+                                        <!--4-->
+                                        <div class="col-sm-6 col-md-3">
+                                                <p class="textlight" style="padding-top:3%;">Genesis</p>
+                                            <a class="lightbox">
+                                                <div class="container1">
+                                                    <img src="img/navicelle/4.jpg" alt="Avatar" class="image1">
+                                                    <div class="overlay1 row">
+
+                                                        <div class="col" style="margin: 5%;">
+                                                            <p class="text1 textbold" style="position: relative;">
+                                                                Potenza</p>
+                                                            <p class="text1 textbold" style="position: relative;">
+                                                                Massa</p>
+                                                            <p class="text1 textbold" style="position: relative;">
+                                                                Posti</p>
+                                                                <button class="button" style=" font-size: 0.9em; padding: 0.1em; padding-left: 0.4em; padding-right: 0.4em;"
+                                                                onclick="noleggiata();"> noleggia</button>
+                                                        </div>
+                                                        <div class="col" style="margin: 5%;">
+                                                            <p class="text1 textlight" style="position: relative;">
+                                                                503
+                                                                W</p>
+                                                            <p class="text1 textlight" style="position: relative;">
+                                                                806
+                                                                kg</p>
+                                                            <p class="text1 textlight" style="position: relative;">
+                                                                2
+                                                            </p>
+                                                        </div>
+
+
+
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <!--5-->
+                                        <div class="col-sm-6 col-md-3">
+                                                <p class="textlight" style="padding-top:3%;">Mariner alpha</p>
+                                            <a class="lightbox">
+                                                <div class="container1">
+                                                    <img src="img/navicelle/5.jpg" alt="Avatar" class="image1">
+                                                    <div class="overlay1 row">
+
+                                                        <div class="col" style="margin: 5%;">
+                                                            <p class="text1 textbold" style="position: relative;">
+                                                                Potenza</p>
+                                                            <p class="text1 textbold" style="position: relative;">
+                                                                Massa</p>
+                                                            <p class="text1 textbold" style="position: relative;">
+                                                                Posti</p>
+                                                                <button class="button" style=" font-size: 0.9em; padding: 0.1em; padding-left: 0.4em; padding-right: 0.4em;"
+                                                                onclick="noleggiata();"> noleggia</button>
+                                                        </div>
+                                                        <div class="col" style="margin: 5%;">
+                                                            <p class="text1 textlight" style="position: relative;">
+                                                                698
+                                                                W</p>
+                                                            <p class="text1 textlight" style="position: relative;">
+                                                                1203 kg</p>
+                                                            <p class="text1 textlight" style="position: relative;">
+                                                                2
+                                                            </p>
+                                                        </div>
+
+
+
+                                                    </div>
+                                                </div>
+
+                                            </a>
+                                        </div>
+                                        <!--6-->
+                                        <div class="col-sm-6 col-md-3">
+                                                <p class="textlight" style="padding-top:3%;">Mariner beta</p>
+                                            <a class="lightbox">
+                                                <div class="container1">
+                                                    <img src="img/navicelle/6.jpg" alt="Avatar" class="image1">
+                                                    <div class="overlay1 row">
+
+                                                        <div class="col" style="margin: 5%;">
+                                                            <p class="text1 textbold" style="position: relative;">
+                                                                Potenza</p>
+                                                            <p class="text1 textbold" style="position: relative;">
+                                                                Massa</p>
+                                                            <p class="text1 textbold" style="position: relative;">
+                                                                Posti</p>
+                                                                <button class="button" style=" font-size: 0.9em; padding: 0.1em; padding-left: 0.4em; padding-right: 0.4em;"
+                                                                onclick="noleggiata();"> noleggia</button>
+                                                        </div>
+                                                        <div class="col" style="margin: 5%;">
+                                                            <p class="text1 textlight" style="position: relative;">
+                                                                623
+                                                                W</p>
+                                                            <p class="text1 textlight" style="position: relative;">
+                                                                1329 kg</p>
+                                                            <p class="text1 textlight" style="position: relative;">
+                                                                2
+                                                            </p>
+                                                        </div>
+
+
+
+                                                    </div>
+                                                </div>
+
+                                            </a>
+                                        </div>
+                                        <!--7-->
+                                        <div class="col-sm-6 col-md-3">
+                                                <p class="textlight" style="padding-top:3%;">Mariner gamma</p>
+                                            <a class="lightbox">
+                                                <div class="container1">
+                                                    <img src="img/navicelle/7.jpg" alt="Avatar" class="image1">
+                                                    <div class="overlay1 row">
+
+                                                        <div class="col" style="margin: 5%;">
+                                                            <p class="text1 textbold" style="position: relative;">
+                                                                Potenza</p>
+                                                            <p class="text1 textbold" style="position: relative;">
+                                                                Massa</p>
+                                                            <p class="text1 textbold" style="position: relative;">
+                                                                Posti</p>
+                                                                <button class="button" style=" font-size: 0.9em; padding: 0.1em; padding-left: 0.4em; padding-right: 0.4em;"
+                                                                onclick="noleggiata();"> noleggia</button>
+                                                        </div>
+                                                        <div class="col" style="margin: 5%;">
+                                                            <p class="text1 textlight" style="position: relative;">
+                                                                900
+                                                                W</p>
+                                                            <p class="text1 textlight" style="position: relative;">
+                                                                790
+                                                                kg</p>
+                                                            <p class="text1 textlight" style="position: relative;">
+                                                                2
+                                                            </p>
+                                                        </div>
+
+
+
+                                                    </div>
+                                                </div>
+
+                                            </a>
+                                        </div>
+                                        <!--9-->
+                                        <div class="col-sm-6 col-md-3">
+                                                <p class="textlight" style="padding-top:3%;">Voyager 1</p>
+                                            <a class="lightbox">
+                                                <div class="container1">
+                                                    <img src="img/navicelle/b.jpg" alt="Avatar" class="image1">
+                                                    <div class="overlay1 row">
+
+                                                        <div class="col" style="margin: 5%;">
+                                                            <p class="text1 textbold" style="position: relative;">
+                                                                Potenza</p>
+                                                            <p class="text1 textbold" style="position: relative;">
+                                                                Massa</p>
+                                                            <p class="text1 textbold" style="position: relative;">
+                                                                Posti</p>
+                                                                <button class="button" style=" font-size: 0.9em; padding: 0.1em; padding-left: 0.4em; padding-right: 0.4em;"
+                                                                onclick="noleggiata();"> noleggia</button>
+                                                        </div>
+                                                        <div class="col" style="margin: 5%;">
+                                                            <p class="text1 textlight" style="position: relative;">
+                                                                760
+                                                                W</p>
+                                                            <p class="text1 textlight" style="position: relative;">
+                                                                2053 kg</p>
+                                                            <p class="text1 textlight" style="position: relative;">
+                                                                4
+                                                            </p>
+                                                        </div>
+
+
+
+                                                    </div>
+                                                </div>
+
+                                            </a>
+                                        </div>
+                                        <!--10-->
+                                        <div class="col-sm-6 col-md-3">
+                                                <p class="textlight" style="padding-top:3%;">WMAP</p>
+                                            <a class="lightbox">
+                                                <div class="container1">
+                                                    <img src="img/navicelle/c.jpg" alt="Avatar" class="image1">
+                                                    <div class="overlay1 row">
+
+                                                        <div class="col" style="margin: 5%;">
+                                                            <p class="text1 textbold" style="position: relative;">
+                                                                Potenza</p>
+                                                            <p class="text1 textbold" style="position: relative;">
+                                                                Massa</p>
+                                                            <p class="text1 textbold" style="position: relative;">
+                                                                Posti</p>
+                                                                <button class="button" style=" font-size: 0.9em; padding: 0.1em; padding-left: 0.4em; padding-right: 0.4em;"
+                                                                onclick="noleggiata();"> noleggia</button>
+                                                        </div>
+                                                        <div class="col" style="margin: 5%;">
+                                                            <p class="text1 textlight" style="position: relative;">
+                                                                630
+                                                                W</p>
+                                                            <p class="text1 textlight" style="position: relative;">
+                                                                2
+                                                                530 kg</p>
+                                                            <p class="text1 textlight" style="position: relative;">
+                                                                2</p>
+                                                        </div>
+
+
+
+                                                    </div>
+                                                </div>
+
+                                            </a>
+                                        </div>
+                                        <!--11-->
+                                        <div class="col-sm-6 col-md-3">
+                                                <p class="textlight" style="padding-top:3%;">Nautilus-X</p>
+                                            <a class="lightbox">
+                                                <div class="container1">
+                                                    <img src="img/navicelle/d.jpg" alt="Avatar" class="image1">
+                                                    <div class="overlay1 row">
+
+                                                        <div class="col" style="margin: 5%;">
+                                                            <p class="text1 textbold" style="position: relative;">
+                                                                Potenza</p>
+                                                            <p class="text1 textbold" style="position: relative;">
+                                                                Massa</p>
+                                                            <p class="text1 textbold" style="position: relative;">
+                                                                Posti</p>
+                                                                <button class="button" style=" font-size: 0.9em; padding: 0.1em; padding-left: 0.4em; padding-right: 0.4em;"
+                                                                onclick="noleggiata();"> noleggia</button>
+                                                        </div>
+                                                        <div class="col" style="margin: 5%;">
+                                                            <p class="text1 textlight" style="position: relative;">
+                                                                530
+                                                                W</p>
+                                                            <p class="text1 textlight" style="position: relative;">
+                                                                1793 kg</p>
+                                                            <p class="text1 textlight" style="position: relative;">
+                                                                2
+                                                            </p>
+                                                        </div>
+
+
+
+                                                    </div>
+                                                </div>
+
+                                            </a>
+                                        </div>
+                                        <!--12-->
+                                        <div class="col-sm-6 col-md-3">
+                                                <p class="textlight" style="padding-top:3%;">Kliper</p>
+                                            <a class="lightbox">
+                                                <div class="container1">
+                                                    <img src="img/navicelle/e.jpg" alt="Avatar" class="image1" style="border-bottom: none;">
+                                                    <div class="overlay1 row">
+
+                                                        <div class="col" style="margin: 5%;">
+                                                            <p class="text1 textbold" style="position: relative;">
+                                                                Potenza</p>
+                                                            <p class="text1 textbold" style="position: relative;">
+                                                                Massa</p>
+                                                            <p class="text1 textbold" style="position: relative;">
+                                                                Posti</p>
+                                                                <button class="button" style=" font-size: 0.9em; padding: 0.1em; padding-left: 0.4em; padding-right: 0.4em;"
+                                                                onclick="noleggiata();"> noleggia</button>
+                                                        </div>
+                                                        <div class="col" style="margin: 5%;">
+                                                            <p class="text1 textlight" style="position: relative;">
+                                                                660
+                                                                W</p>
+                                                            <p class="text1 textlight" style="position: relative;">
+                                                                3208 kg</p>
+                                                            <p class="text1 textlight" style="position: relative;">
+                                                                2</p>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <script>
+                                    function mostra2() {
+                                        var x = document.getElementById("mostra2");
+                                        if (x.style.display === "none") {
+                                            x.style.display = "block";
+                                            document.getElementById('tastoMostra2').innerHTML = 'Nascondi';
+                                        } else {
+                                            x.style.display = "none";
+                                            document.getElementById('tastoMostra2').innerHTML = 'Mostra';
+                                        }
+                                    }
+                                    </script>
+
+                            <!--script noleggiata-->
+
+                            <script>
+                                function noleggiata() {
+                                    var txt;
+                                    var mail = prompt("Inserisci la tua mail:", "");
+                                    if (mail == null || mail == "") {
+                                        txt = "<p id='conferma2' class=' conferma'>Non hai inserito la mail</p>"
+                                    } else {
+                                        txt = "<p id='conferma2' class=' conferma'>Invieremo una mail di conferma a: "+mail+"</p>"
+                                    }
+                                    document.getElementById("contentConferma2").innerHTML = txt;
+                                }
+                                </script>
+
+                   
+
+            </div>
+            </div>
+            </section>
 
         <!--footer-->
         <div>
@@ -2462,9 +3398,11 @@ Tutti bambini di età inferiore a 2 anni soggiornano gratuitamente. Ogni rumore 
     <script src="js/index.js"></script>
     <script src="js/check.js"></script>
     <script src="js/grafico.js"></script>
+    <script src="js/grafico2.js"></script>
     <script src="js/random.js"></script>
     <script src="js/scroll.js"></script>
     <script src="js/randomNumber.js"></script>
+    <script src="js/leggi-più.js"></script>
 
 
     <script src='https://unpkg.com/popper.js'></script>
@@ -2483,6 +3421,8 @@ Tutti bambini di età inferiore a 2 anni soggiornano gratuitamente. Ogni rumore 
                        document.getElementById("carosello").style.display = 'none';
                         }
                 </script>
+                
 </body>
+
 
 </html>
