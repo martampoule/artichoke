@@ -10,7 +10,7 @@ marta
     <meta name="description" content="Free Web tutorials">
     <meta name="keywords" content="HTML,CSS,XML,JavaScript">
     <meta name="author" content="John Doe">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>Trolling.com: Hotel dei Cenos</title>
     <link rel="icon" href="img/icon.png">
 
@@ -2316,21 +2316,69 @@ Tutti bambini di età inferiore a 2 anni soggiornano gratuitamente. Ogni rumore 
 
 
     <!--HAMBURGER-->
-    <section class="d-md-none">
+    <section class="d-md-none h-body">
 
         <!--hamburger-->
         <section style="background-color: rgb(5, 55, 126); height: 60px; width: 100%;">
-            <div class="row" style="padding: 3%; padding-top: 0;">
+            <div class="row" style="padding: 3%; padding-top: 0; margin-right: 0;">
                 <div class="col">
-                    <a href="index.html"> <img src="img/logo.png" alt="logo" class="logo-booking float-left" style="margin-left:0;"></a>
+                    <a href="index.html"> <img src="img/logo.png" alt="logo" class="logo-booking float-left" style="margin-left:10%;"></a>
                 </div>
-                <div class="col float-right">
-
+                <div class="col" style="text-align: right;">
+                
+                          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                            <i class="fa fa-bars" style="color: white; font-size: 2em; padding-top: 13px; margin-right: 10%;"></i>
+                          </a>
+                          
                 </div>
         </section>
 
+        <section style="background-color: #f0f0f0; position: relative; display: none" id="myLinks">
+            <ul style="display: table-raw; list-style: none;padding-left: 3%; background-color: #f0f0f0; padding-top: 3%; padding-right: 3%; padding-bottom: 3%;">
+                <span style="padding-left: 3%; font-weight: 700;">TROOLLING.COM</span>
+                <li style="background-color: white; padding: 3%; border-bottom: 1px solid rgb(223, 223, 223);">
+                    <a href="" style=" color: black; font-size: 1.1em; text-decoration: none;">Alloggi</a> <i style="font-size: 1.5em;" class="fa fa-home float-right"></i>
+                </li>
+                <li style="background-color: white; padding: 3%; border-bottom: 1px solid rgb(223, 223, 223);">
+                    <a href="#h-navicelle" style=" color: black; font-size: 1.1em; text-decoration: none;">Noleggio navicelle</a> <i style="font-size: 1.2em;" class="fas fa-space-shuttle float-right"></i>
+                </li>
+                <li style="background-color: white; padding: 3%; border-bottom: 1px solid rgb(223, 223, 223);">
+                    <a href="" data-toggle="modal" data-target="#largeModal" style=" color: black; font-size: 1.1em; text-decoration: none;">Chat</a> <i style="font-size: 1.2em;" class="fas fa-comment float-right"></i>       
+                </li>
+            </ul>
+            <ul style="display: table-raw; list-style: none;padding-left: 3%; background-color: #f0f0f0; padding-top: 3%; padding-right: 3%; padding-bottom: 3%;">
+                <span style="padding-left: 3%; font-weight: 700;">HOTEL DEI CENOS</span>
+                <li style="background-color: white; padding: 3%; border-bottom: 1px solid rgb(223, 223, 223);">
+                    <a href="#h-info" style=" color: black; font-size: 1.1em; text-decoration: none;">Informazioni e prezzi</a> <i style="font-size: 1.5em;" class="fa fa-info float-right"></i>
+                </li>
+                <li style="background-color: white; padding: 3%; border-bottom: 1px solid rgb(223, 223, 223);">
+                    <a href="#h-servizi" style=" color: black; font-size: 1.1em; text-decoration: none;">Servizi</a> <i style="font-size: 1.2em;" class="fas fa-concierge-bell float-right"></i>
+                </li>
+                <li style="background-color: white; padding: 3%; border-bottom: 1px solid rgb(223, 223, 223);">
+                    <a href="#h-vietato"style=" color: black; font-size: 1.1em; text-decoration: none;">Vietato leggere</a> <i style="font-size: 1.2em;" class="fas fa-times-circle float-right"></i>       
+                </li>
+                <li style="background-color: white; padding: 3%; border-bottom: 1px solid rgb(223, 223, 223);">
+                    <a href="#-sapere"style=" color: black; font-size: 1.1em; text-decoration: none;">Da non sapere</a> <i style="font-size: 1.2em;" class="fas fa-book-dead float-right"></i>       
+                </li>
+                <li style="background-color: white; padding: 3%; border-bottom: 1px solid rgb(223, 223, 223);">
+                    <a href="#h-inutili" style=" color: black; font-size: 1.1em; text-decoration: none;">Recensioni inutili</a>        
+                </li>
+            </ul>
+
+            <script>
+                function myFunction() {
+                  var x = document.getElementById("myLinks");
+                  if (x.style.display === "block") {
+                    x.style.display = "none";
+                  } else {
+                    x.style.display = "block";
+                  }
+                }
+                </script>
+        </section>
+
         <!--TITOLO-->
-        <section class="h-margin">
+        <section class="h-margin" style="margin-top: 10px;">
             <p class="h-title-main">Hotel dei Cenos</p>
          <span class="fa fa-star checked" style="font-size: 0.6em; color: orange;"></span>
          <span class="fa fa-star checked" style="font-size: 0.6em; color: orange;"></span>
@@ -2345,13 +2393,13 @@ Tutti bambini di età inferiore a 2 anni soggiornano gratuitamente. Ogni rumore 
 
         <!--GIALLO-->
         <section class="h-g-div">
-                        <p class="textbold"> DISPONIBILITÀ </p>
-                        <p style="font-size: 0.85em; font-weight: 700; margin-bottom: 1%;">Check-in</p>
-                        <input id="startDate3"/>
-                        <p style="font-size: 0.85em; font-weight: 700; margin-bottom: 1%;">Check-out</p>
-                        <input id="endDate3"/>
+                        <p class="textbold" style=" margin-left: 3%;"> DISPONIBILITÀ </p>
+                        <p style="font-size: 0.85em; font-weight: 700; margin-bottom: 1%; margin-left: 3%;">Check-in</p>
+                        <input id="startDate3" style=" margin-left: 3%;"/>
+                        <p style="font-size: 0.85em; font-weight: 700; margin-bottom: 1%;  margin-left: 3%;">Check-out</p>
+                        <input id="endDate3" style=" margin-left: 3%;"/>
                         <br>
-                        <button class="button-giallo prenota-ora" onclick="alertBoxGiallo()" style="width: 100%;">
+                        <button class="button-giallo prenota-ora" onclick="alertBoxGiallo()" style="width: 90%; margin-left: 3%;">
                             <a style="text-decoration: none; color: white;">
                                 Verifica disponibilità </a>
                         </button>
@@ -2415,11 +2463,11 @@ Tutti bambini di età inferiore a 2 anni soggiornano gratuitamente. Ogni rumore 
                         <div class="carousel-cell"><img src="img/mondi/21.png" alt=""></div>
                         <div class="carousel-cell"><img src="img/mondi/22.png" alt=""></div>
                     </div>
-        </div>
+        </div> 
 
         <!--FAVOLOSO-->
         <div class="h-border">
-            <div class="row h-margin">
+            <div class="row h-margin" style="margin-top: 3%; margin-bottom: 3%; ">
                 <div class="col-2" style="padding-left: 2%;">
                     <div style="background-color: rgb(5, 55, 126); width: 50px; height: 50px; border-radius: 5px 5px 5px 0;"class="float-left"> 
                         <div style="text-align: center; margin-top: 30%; color: white;" class="textbold">
@@ -2434,9 +2482,9 @@ Tutti bambini di età inferiore a 2 anni soggiornano gratuitamente. Ogni rumore 
         </div>
         
         <!--DESCRIZIONE-->
-        <section class="h-border" style="padding-bottom: 0;">
+        <section class="h-border" style="padding-bottom: 0;" id="h-info">
             <div class="h-margin">
-            <p class="h-g-text" style="text-justify: inter-character;">
+            <p class="h-g-text" style="text-justify: inter-character; padding-top: 5%;">
                     L’hotel dei Cenos sorge in un isola di 250 km per 65 km posizionato in un
                     nuovo
                     mondo chiamato Proxima B Centaur, affichè possa ospitare i viaggiatori
@@ -2469,11 +2517,11 @@ Tutti bambini di età inferiore a 2 anni soggiornano gratuitamente. Ogni rumore 
         </section>
         
         <!--SERVIZI-->
-        <section class="h-border">
+        <section class="h-border" id="h-servizi">
             <div class="h-margin">
                 <div class="row" style="margin: 0;">
-            <p class="h-title col" style="margin: 0; padding: 0;">SERVIZI</p>
-            <p class="col float-right" style="text-align: right; font-weight: 700; color: rgb(18, 121, 201);" onclick="serviziS();" id="serviziSB">+</p>
+            <p class="h-title col" style="margin: 0; padding: 0; margin-top: 3%;">SERVIZI</p>
+            <p class="col float-right" style="text-align: right; color: rgb(18, 121, 201); font-size: 1.7em;" onclick="serviziS();" id="serviziSB">+</p>
         </div>
         <p class="h-g-text"> <i class="fas fa-parking" style="font-size: 1em; margin-right: 10px; line-height: 1.2em;"></i>
             parcheggio &nbsp &nbsp
@@ -2659,8 +2707,8 @@ Tutti bambini di età inferiore a 2 anni soggiornano gratuitamente. Ogni rumore 
         <section class="h-border">
                 <div class="h-margin">
                     <div class="row" style="margin: 0;">
-                        <p class="h-title col" style="margin: 0; padding: 0;">Cosa è piaciuto di più agli ospiti:</p>
-                        <p class="col float-right" style="text-align: right; font-weight: 700; color: rgb(18, 121, 201);" onclick="commentiS();" id="commentiSB">+</p>
+                        <p class="h-title col" style="margin: 0; padding: 0; margin-top: 3%;">Cosa è piaciuto di più agli ospiti:</p>
+                        <p class="col float-right" style="text-align: right; color: rgb(18, 121, 201); font-size: 1.7em;" onclick="commentiS();" id="commentiSB">+</p>
                     </div>
 
                     <div class="row" style="margin-top: 5%;">
@@ -2776,8 +2824,8 @@ Tutti bambini di età inferiore a 2 anni soggiornano gratuitamente. Ogni rumore 
         <section class="h-border">
                 <div class="h-margin">
                     <div class="row" style="margin: 0;">
-                <p class="h-title col" style="margin: 0; padding: 0;">DINTORNI</p>
-                <p class="col float-right" style="text-align: right; font-weight: 700; color: rgb(18, 121, 201);" onclick="stazioniS();" id="stazioniSB">+</p>
+                <p class="h-title col" style="margin: 0; padding: 0; margin-top: 3%;">DINTORNI</p>
+                <p class="col float-right" style="text-align: right; color: rgb(18, 121, 201); font-size: 1.7em;" onclick="stazioniS();" id="stazioniSB">+</p>
             </div>
             <p class="h-g-text" style="margin-top:3%; font-weight: 700;">Pianeti vicini</p>
             <div class="dintorni2">
@@ -2841,8 +2889,8 @@ Tutti bambini di età inferiore a 2 anni soggiornano gratuitamente. Ogni rumore 
         <section class="h-border">
                 <div class="h-margin">
                     <div class="row" style="margin: 0;">
-                <p class="h-title col" style="margin: 0; padding: 0;">CARATTERISTICHE</p>
-                <p class="col float-right" style="text-align: right; font-weight: 700; color: rgb(18, 121, 201);" onclick="pianetiS();" id="pianetiSB">+</p>
+                <p class="h-title col" style="margin: 0; padding: 0; margin-top: 3%;">CARATTERISTICHE</p>
+                <p class="col float-right" style="text-align: right; color: rgb(18, 121, 201); font-size: 1.7em;" onclick="pianetiS();" id="pianetiSB">+</p>
             </div>
             <p class="h-g-text" style="margin-top:3%; font-weight: 700;">Stella madre</p>
             <div class="dintorni2">
@@ -2905,11 +2953,11 @@ Tutti bambini di età inferiore a 2 anni soggiornano gratuitamente. Ogni rumore 
             </section>
 
         <!--VIETATO-->
-        <section class="h-border">
+        <section class="h-border" id="h-vietato">
                 <div class="h-margin">
                     <div class="row" style="margin: 0;">
-                <p class="h-title col" style="margin: 0; padding: 0;">VIETATO LEGGERE</p>
-                <p class="col float-right" style="text-align: right; font-weight: 700; color: rgb(18, 121, 201);" onclick="vietatoS();" id="vietatoSB">+</p>
+                <p class="h-title col" style="margin: 0; padding: 0; margin-top: 3%;">VIETATO LEGGERE</p>
+                <p class="col float-right" style="text-align: right; color: rgb(18, 121, 201); font-size: 1.7em;" onclick="vietatoS();" id="vietatoSB">+</p>
             </div>
             <div class="row vietatoS h-g-text" style="padding: 3%">
                     <div class="col">
@@ -2984,10 +3032,10 @@ Tutti bambini di età inferiore a 2 anni soggiornano gratuitamente. Ogni rumore 
         </section>
 
         <!--DA NON SAPERE-->
-        <section class="h-border">
+        <section class="h-border" id="h-sapere">
                 <div class="h-margin">
                     <div class="row" style="margin: 0;">
-                <p class="h-title col" style="margin: 0; padding: 0;">DA NON SAPERE</p>
+                <p class="h-title col" style="margin: 0; padding: 0; margin-top: 3%;">DA NON SAPERE</p>
             </div>
             <div class="container" style="padding: 0; margin-top: 10%;">
                     <!---->
@@ -2999,11 +3047,11 @@ Tutti bambini di età inferiore a 2 anni soggiornano gratuitamente. Ogni rumore 
         </section>
 
         <!--NAVICELLE-->
-        <section class="h-border">
+        <section class="h-border" id="h-navicelle">
                 <div class="h-margin">
                     <div class="row" style="margin: 0;">
-                <p class="h-title col" style="margin: 0; padding: 0;">NOLEGGIO NAVICELLE</p>
-                <p class="col float-right" style="text-align: right; font-weight: 700; color: rgb(18, 121, 201);" onclick="noleggioS();" id="noleggioSB">+</p>
+                <p class="h-title col" style="margin: 0; padding: 0; margin-top: 3%;">NOLEGGIO NAVICELLE</p>
+                <p class="col float-right" style="text-align: right; color: rgb(18, 121, 201); font-size: 1.7em;" onclick="noleggioS();" id="noleggioSB">+</p>
             </div>
             <div class="conferma"> 3 persone hanno appena noleggiato una navicella</div>
             <div id="contentConferma2"> </div>
@@ -3443,11 +3491,11 @@ Tutti bambini di età inferiore a 2 anni soggiornano gratuitamente. Ogni rumore 
         </section>
 
         <!--COMMENTI INUTILI-->
-        <section class="h-border" >
+        <section class="h-border" id="h-inutili">
                 <div class="h-margin">
                     <div class="row" style="margin: 0;">
-                        <p class="h-title col" style="margin: 0; padding: 0;">COMMENTI INUTILI</p>
-                        <p class="col float-right" style="text-align: right; font-weight: 700; color: rgb(18, 121, 201);" onclick="commenti1S();" id="commenti1SB">+</p>
+                        <p class="h-title col" style="margin: 0; padding: 0; margin-top: 3%;">COMMENTI INUTILI</p>
+                        <p class="col float-right" style="text-align: right; color: rgb(18, 121, 201); font-size: 1.7em;" onclick="commenti1S();" id="commenti1SB">+</p>
                     </div>
 
                     <!--1-->
@@ -3579,7 +3627,7 @@ Tutti bambini di età inferiore a 2 anni soggiornano gratuitamente. Ogni rumore 
     
                         </div>
 
-                        <p style="font-size: 0.5em; text-align: center;">Copyleft &#9400; 2018-2019 Troolling.com&#8482. Tutti i diritti riservati <br> Il tuo numero di riferimento è <span class="personeNumber2" style="font-weight: 700;"></span></p> 
+                        <p style="font-size: 0.5em; text-align: center; padding-bottom: 5%; padding-top: 5%;">Copyleft &#9400; 2018-2019 Troolling.com&#8482. Tutti i diritti riservati <br> Il tuo numero di riferimento è <span class="personeNumber2" style="font-weight: 700;"></span></p> 
                     </div>
                 </div>
             </div>
@@ -3588,7 +3636,7 @@ Tutti bambini di età inferiore a 2 anni soggiornano gratuitamente. Ogni rumore 
 
  <!--chat-->
  <div class="container">
-        <div class="row mb-4">
+        <div class="">
           <div class="" style="border-radius: 50px;">
       
             <a href="#" class="btn btn-lg btn-primary chat-button" data-toggle="modal" data-target="#largeModal"><i class="fas fa-comment"></i></a>
@@ -3624,6 +3672,9 @@ Tutti bambini di età inferiore a 2 anni soggiornano gratuitamente. Ogni rumore 
           </div>
         </div>
       </div>
+
+
+
     <!--SCRIPT-->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
