@@ -2,11 +2,11 @@ $(document).ready(function() {
     $("#toggle").click(function() {
       var elem = $("#toggle").text();
       if (elem == "Leggi di più") {
-        //Stuff to do when btn is in the read more state
+        
         $("#toggle").text("Chiudi");
         $("#text").slideDown();
       } else {
-        //Stuff to do when btn is in the read less state
+        
         $("#toggle").text("Leggi di più");
         $("#text").slideUp();
       }

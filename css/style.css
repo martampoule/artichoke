@@ -151,14 +151,14 @@ border-radius: 7px 7px 7px 7px;
 
 .rect-azzurro-bordo {
   border-style: solid;
-  border-color: rgb(18, 121, 201, 0.1);
+  border-color: rgb(207, 233, 240);
   border-width: 1px;
   border-radius: 5px 5px 5px 5px;
 }
 
 .rect-azzurro-bordo1 {
   border-style: solid;
-  border-color: rgb(18, 121, 201, 0.1);
+  border-color: rgb(207, 233, 240);
   border-width: 1px;
   border-bottom: none;
   border-radius: 5px 5px 0px 0px;
@@ -166,14 +166,14 @@ border-radius: 7px 7px 7px 7px;
 
 .aereoportodiv {
   border-style: solid;
-  border-color: rgb(18, 121, 201, 0.1);
+  border-color: rgb(207, 233, 240);
   border-width: 1px;
   border-top: none;
 }
 
 .aereoportodiv1 {
   border-style: solid;
-  border-color: rgb(18, 121, 201, 0.1);
+  border-color: rgb(207, 233, 240);
   border-width: 1px;
   border-top: none;
   border-radius: 0px 0px 5px 5px;
@@ -282,14 +282,14 @@ border-radius: 7px 7px 7px 7px;
 
 .rect-verde {
   margin-left: 1.5%;
-  background-color: rgb(30, 176, 42, 0.1);
+  background-color: rgb(232, 247, 233);
   border-radius: 5px 5px 5px 5px;
   padding: 10px;
 }
 
 .rect-verde-bordo {
   border-style: solid;
-  border-color: rgb(30, 176, 42, 0.4);
+  border-color: rgb(151, 218, 157);
   border-width: 1px;
   border-radius: 3px 3px 3px 3px;
 }
@@ -319,7 +319,7 @@ border-radius: 7px 7px 7px 7px;
   border-right: none;
   border-top: none;
   border-width: 1px;
-  border-color: rgb(100, 100, 100, 0.2);
+  border-color: #cecece;
   padding-top: 5%;
 }
 
@@ -555,7 +555,7 @@ border-radius: 7px 7px 7px 7px;
   border-bottom: solid;
   border-width: 1px;
 
-  border-color: rgb(100, 100, 100, 0.2);
+  border-color: #cecece;
   position: relative;
 }
 
